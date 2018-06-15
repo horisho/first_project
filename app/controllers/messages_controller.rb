@@ -4,8 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @messages = Message.all
-    @message = Message.find_by(:title => params[:title])
+    @message = Message.find_by(:id => params[:id])
   end
 
   def new
